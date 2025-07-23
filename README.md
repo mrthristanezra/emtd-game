@@ -1,2 +1,6 @@
-# emtd-game
-A Math-based tower defense (TD) game project that I'm working on. I use Grok AI to create the sprites, towers, enemies, and much more.
+# Endless Math Tower Defense
+
+
+<img width="3780" height="1524" alt="game-logo" src="https://github.com/user-attachments/assets/6224e1e6-88bd-41ca-8def-5852d49b8f30" />
+
+Endless Math Tower Defense is a math-based tower defense game whese players must place units based on the instructions. While the developer, Mr. Thristan Ezra uses Grok as a game engine to create the sprites, maps, enemies, and towers.
