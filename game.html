@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Endless Math Tower Defense</title>
+  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.11.9/lib/p5.min.js"></script>
+
+  
+  <!-- Comment -->
+  <script type="text/javascript" src="javascript-menu/settings.js"></script>
+  <script type="text/javascript" src="javascript-menu/time-schedule.js"></script>
+  <script type="text/javascript" src="javascript-menu/analog-data.js"></script>
+  
+  <!-- Comment -->
+  <script type="text/javascript" src="boss/script.js"></script>
+  <script type="text/javascript" src="console-log.js"></script>
+  
+  <link rel="stylesheet" href="game-styling.css">
+  <Link rel="icon" type="image/x-icon" href="webicon.png">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body><span><script src="asset/map3.js"></script></span>
+  <p class="text-description">Note: if your computer screen is too large, you can try zoom in the page!</p>
+  <div id="main-board"><br><br>
+  <center><img src="game-logo-beta.png" id="game-logo" alt="Endless Math Tower Defense Logo"><br><br><br>
+  <div id="caption-text">Why can't you just study more often?</div>
+  </center></div>
+  <div id="game-ui">
+    <div class="status-bar">
+      <span>Wave(θ): --</span>
+      <span><i>f</i> (<i>λe</i>) = --</span>
+      <span>(i)<sup>x</sup> = --</span>
+      <span>-------------</span>
+    </div>
+    <div class="tower-buttons">
+      <button class="tower-btn" data-type="Pistol">Guard (10<i>x</i>)</button>
+      <button class="tower-btn" data-type="Sniper">Sniper (20<i>x</i>)</button>
+      <button class="tower-btn" data-type="Colonel">Colonel (40<i>x</i>)</button>
+      <button class="tower-btn" data-type="Assault">Assault (95<i>x</i>)</button>
+      <button class="tower-btn" data-type="Destroyer">Gladiator (220<i>x</i>)</button>
+      <button class="tower-btn" id="start-wave">Start Wave</button>
+    </div>
+    <span id="boss-text"></span>
+    <button id="eraser-btn">z &times; <i>f</i> (⋅)<sup><i>x</i></sup> = &infin;</button>
+  </div>
+</body>
+</html>
