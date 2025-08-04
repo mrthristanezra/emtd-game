@@ -11,11 +11,11 @@ let selectedTower = null;
 let canvas;
 
 const towerTypes = {
-  Pistol: { cost: 10, range: 100, damage: 5, cooldown: 20 },
-  Sniper: { cost: 20, range: 150, damage: 375, cooldown: 50 },
-  Colonel: { cost: 40, range: 120, damage: 25, cooldown: 30 },
-  Assault: { cost: 95, range: 130, damage: 40, cooldown: 17 },
-  Destroyer: { cost: 220, range: 200, damage: 85, cooldown: 6 }
+  Pistol: { cost: 10, range: 100, damage: 2, cooldown: 20 },
+  Sniper: { cost: 20, range: 150, damage: 35, cooldown: 50 },
+  Colonel: { cost: 40, range: 120, damage: 5, cooldown: 30 },
+  Assault: { cost: 95, range: 130, damage: 4, cooldown: 17 },
+  Destroyer: { cost: 220, range: 200, damage: 8, cooldown: 6 }
 };
 
 window.onload = function() {
@@ -142,32 +142,32 @@ function startWave() {
 
 function spawnEnemies() {
   const enemyTypes = [
-    { symbol: '+', health: 20, speed: 0.8, value: 5, damage: 1 },
-    { symbol: '−', health: 30, speed: 0.7, value: 7, damage: 1 },
-    { symbol: '×', health: 40, speed: 1.0, value: 10, damage: 1 },
-    { symbol: '÷', health: 25, speed: 1.2, value: 8, damage: 1 },
-    { symbol: '√', health: 50, speed: 0.5, value: 15, damage: 1 },
-    { symbol: '∑', health: 100, speed: 0.3, value: 20, damage: 1 },
-    { symbol: 'π', health: 30, speed: 1.5, value: 12, damage: 1 },
-    { symbol: '(+)', health: 120, speed: 0.8, value: 5, damage: 1 },
-    { symbol: '(−)', health: 130, speed: 0.7, value: 7, damage: 1 },
-    { symbol: '(×)', health: 140, speed: 1.0, value: 10, damage: 1 },
-    { symbol: '(÷)', health: 125, speed: 1.2, value: 8, damage: 1 },
-    { symbol: '(√)', health: 150, speed: 0.5, value: 15, damage: 1 },
-    { symbol: '(∑)', health: 1100, speed: 0.3, value: 20, damage: 1 },
-    { symbol: '(π)', health: 130, speed: 1.5, value: 12, damage: 1 },
-    { symbol: '∞', health: 1200, speed: 1.3, value: 50, damage: 1 },
-    { symbol: '∄', health: 150, speed: 5.6, value: 25, damage: 1 },
-    { symbol: '≀', health: 90, speed: 8.2, value: 20, damage: 1 },
-    { symbol: '≀≀', health: 90, speed: 8.2, value: 20, damage: 1 },
-    { symbol: '≀≀≀', health: 90, speed: 8.2, value: 20, damage: 1 },
-    { symbol: '⅌', health: 3000, speed: 0.8, value: 100, damage: 1 },
-    { symbol: 'ℵ', health: 5000, speed: 2.4, value: 250, damage: 1 }
+    { symbol: '+', health: 2, speed: 0.8, value: 5, damage: 1 },
+    { symbol: '−', health: 3, speed: 0.7, value: 7, damage: 1 },
+    { symbol: '×', health: 4, speed: 1.0, value: 10, damage: 1 },
+    { symbol: '÷', health: 7, speed: 1.2, value: 8, damage: 1 },
+    { symbol: '√', health: 5, speed: 0.5, value: 15, damage: 1 },
+    { symbol: '∑', health: 10, speed: 0.3, value: 20, damage: 1 },
+    { symbol: 'π', health: 3, speed: 31.4, value: 12, damage: 1 },
+    { symbol: '(+)', health: 12, speed: 0.8, value: 5, damage: 1 },
+    { symbol: '(−)', health: 13, speed: 0.7, value: 7, damage: 1 },
+    { symbol: '(×)', health: 14, speed: 1.0, value: 10, damage: 1 },
+    { symbol: '(÷)', health: 12, speed: 1.2, value: 8, damage: 1 },
+    { symbol: '(√)', health: 15, speed: 0.5, value: 15, damage: 1 },
+    { symbol: '(∑)', health: 80, speed: 0.3, value: 20, damage: 1 },
+    { symbol: '(π)', health: 13, speed: 1.5, value: 12, damage: 1 },
+    { symbol: '∞', health: 120, speed: 1.3, value: 50, damage: 1 },
+    { symbol: '∄', health: 15, speed: 5.6, value: 25, damage: 1 },
+    { symbol: '≀', health: 9, speed: 8.2, value: 20, damage: 1 },
+    { symbol: '≀≀', health: 9, speed: 8.2, value: 20, damage: 1 },
+    { symbol: '≀≀≀', health: 9, speed: 8.2, value: 20, damage: 1 },
+    { symbol: '⅌', health: 300, speed: 0.8, value: 100, damage: 1 },
+    { symbol: 'ℵ', health: 500, speed: 2.4, value: 250, damage: 1 }
   ];
   
   for (let i = 0; i < wave * 5; i++) {
     let type = enemyTypes[Math.floor(Math.random() * enemyTypes.length)];
-    let scaledHealth = type.health * (1 + wave * 0.1);
+    let scaledHealth = type.health + (wave - 1);
     enemies.push(new Enemy(type.symbol, scaledHealth, type.speed, type.value, type.damage));
   }
 }
