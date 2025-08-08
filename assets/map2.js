@@ -126,7 +126,7 @@ function updateUI() {
 }
 
 function mousePressed() {
-  if (selectedTower && mouseX < 800 && gameState === 'prep') {
+  if (selectedTower && mouseX < 800 && mouseY > 0 && mouseY < 600 && mouseX > 0 && gameState === 'prep') {
     let towerCost = towerTypes[selectedTower].cost;
     if (coins >= towerCost) {
       towers.push(new Tower(mouseX, mouseY, selectedTower));
